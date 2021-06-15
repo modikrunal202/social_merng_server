@@ -1,6 +1,8 @@
 const { ApolloServer } = require("apollo-server");
 const mongoose = require("mongoose")
-const { MONGO_URI } = require('./config')
+// const { MONGO_URI } = require('./config')
+const MONGO_URI = process.env.MONGO_URI;
+
 
 const resolvers = require("./graphQl/resolvers")
 const typeDefs = require("./graphQl/typeDefs");
